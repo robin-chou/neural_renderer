@@ -1,5 +1,11 @@
 #include <torch/torch.h>
 
+// 重定义AT_CHECK宏为TORCH_CHECK
+
+#ifndef AT_CHECK
+#define AT_CHECK TORCH_CHECK 
+#endif
+
 #include <vector>
 
 // CUDA forward declarations
